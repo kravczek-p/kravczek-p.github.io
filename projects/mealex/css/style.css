@@ -1,72 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,400i,500,500i,700');
 @import url('https://fonts.googleapis.com/css?family=Cormorant:400,500,700');
-/*img {
+img {
 	vertical-align: middle;	
 	max-width: 100%;
-}*/
-img{
-    max-width: 500px;
 }
-.resume-portfolio__title{
-    padding-bottom: 30px;
-}
-.resume__work{
-    width: 20%;
-    float: left;
-    margin-left: 30px;
-}
-.resume__work-link{
-    padding: 20px 20px;
-    border: 2px solid red;
-}
-.resume-item{
-    z-index: 10;
-    position: relative;
-    font-family: 'Montserrat', sans-serif;
-   
-
-    background:url(../img/resume-img.png) no-repeat;
-     background-position: right top; 
-     }
-     .resume{
-        padding-bottom: 40px;
-        position: relative;
-        z-index: 1;
-        background: #9ba08a;
-     }
-     .resumu__title{
-        padding-bottom: 40px;
-        font-size: 14px;
-     }
-     .resume__information{
-        padding-bottom: 14px;
-
-     }
-     .resume__link{
-      color: #000000;
-     }
-     .resume__link:hover{
-      text-decoration: none;
-      color: red;
-     }
-     ul li{
-      display: block;
-      padding-bottom: 10px;
-     }
-     span{
-      font-size: 9px;
-     }
-     .resume_city{
-      margin-left: 10px;
-      font-weight: 700;
-      font-size: 20px;
-     }
-
-
-
-
-
-
 .header{
     position: absolute;
     left: 0;
@@ -172,7 +109,7 @@ nav ul li{
     top: 19px;
 }
 
-/*.mobile-menu .mobile-menu__icon.open span {
+.mobile-menu .mobile-menu__icon.open span {
     background: #dc3522;
 }
 
@@ -206,7 +143,7 @@ nav ul li{
 }
 .mobile-menu .mobile-menu__icon.open:hover {
     opacity: .5;
-}*/
+}
 /* // */
 .baner{
     padding-top: 200px;
@@ -881,4 +818,6 @@ textarea::-webkit-input-placeholder{
 }
 
 @media screen and (max-width:355px){
-.recent-works
+.recent-works__title:after {
+    top: 113px;
+}
