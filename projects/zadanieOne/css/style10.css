@@ -15,6 +15,7 @@
   display: block;
 }
 .banner__preview ul li{
+    padding-left: 20px;
     display: inline-block;
 }
 nav ul{
@@ -25,7 +26,6 @@ nav ul li{padding-right: 30px;
     display: inline-block;
 }
 nav ul li:last-of-type{
-    padding-left: 40px;
     padding-right: 0;
     }
    
@@ -38,8 +38,12 @@ p{
     font-size: 22px;
     text-align: justify;
 }
-h2{
+h2,h3{
     text-align: center;
+}
+img{
+    float: left;
+    margin-right: 15px;
 }
 
 
@@ -76,5 +80,15 @@ h2{
 }
 .button{
     padding-left: 100px;
+}
+.banner__text{
+    font-size: 24px;
+}
+.banner__text_big{
+    line-height: 39px;
+}
+.right{
+    float: right;
+    margin-left: 15px;
 }
 
