@@ -1,0 +1,72 @@
+<style>
+	   h1{
+	   	font-size:45px;
+	   }
+      .grid-container{
+      	display: grid;
+      	grid-template-columns:1fr 1fr 1fr;
+
+      }
+      .bgOne{
+         background: #19bd9b;
+      }
+      .bgTwo{
+      	background: #2dcc70;      	
+      }
+      .bgThree{
+      	background: #3398dc;	
+      }
+      .bgFour{
+      	background: #f39c11;
+      }
+      .bgFive{
+      	background: #d45300;	
+      }
+      .bgSix{
+      	background: #c1392b;	
+      }
+      .bgSeven{
+      	background: #16a086;
+      }
+      .bgEight{
+      	background: #26ae61;	
+      }
+      .bgNine{
+      	background: #2a80b9;	
+      }
+      .bgSeven_f{
+      	background: #f2c40f;
+      }
+      .bgEight_f{
+      	background: #e67f22;	
+      }
+      .bgNine_f{
+      	background: #e84c3d;	
+      }
+      .item{
+      	padding: 27px 0;
+      	text-align: center; 
+      	font-size: 45px;
+      	color: #f9ffff; 	
+      }
+      .flex-container{
+      	display:flex;
+      }
+      .flex-container .item{
+      	width: 33.33333333%;
+
+      }
+      .inline-container .item{
+      	display: inline-block;
+      	width: 33.33333333%;
+      	box-sizing: border-box;
+      }
+      .in{
+      	margin-left: -4px;
+      }
+      .float-container .item{
+      	float: left;
+        width: 33.33333333%;
+      }
+
+
