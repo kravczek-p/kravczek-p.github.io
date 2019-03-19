@@ -1,0 +1,185 @@
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_Rg.eot');
+    src: url('../fonts/Aller_Rg.eot') format('embedded-opentype'),
+        url('../fonts/Aller_Rg.woff2') format('woff2'),
+        url('../fonts/Aller_Rg.woff') format('woff'),
+        url('../fonts/Aller_Rg.ttf') format('truetype'),
+        url('../fonts/Aller_Rg.svg#Aller_Rg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_LtIt.eot');
+    src: url('../fonts/Aller_LtIt.eot') format('embedded-opentype'),
+        url('../fonts/Aller_LtIt.woff2') format('woff2'),
+        url('../fonts/Aller_LtIt.woff') format('woff'),
+        url('../fonts/Aller_LtIt.ttf') format('truetype'),
+        url('../fonts/Aller_LtIt.svg#Aller_LtIt') format('svg');
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_Lt.eot');
+    src: url('../fonts/Aller_Lt.eot') format('embedded-opentype'),
+        url('../fonts/Aller_Lt.woff2') format('woff2'),
+        url('../fonts/Aller_Lt.woff') format('woff'),
+        url('../fonts/Aller_Lt.ttf') format('truetype'),
+        url('../fonts/Aller_Lt.svg#Aller_Lt') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_It.eot');
+    src: url('../fonts/Aller_It.eot') format('embedded-opentype'),
+        url('../fonts/Aller_It.woff2') format('woff2'),
+        url('../fonts/Aller_It.woff') format('woff'),
+        url('../fonts/Aller_It.ttf') format('truetype'),
+        url('../fonts/Aller_It.svg#Aller_It') format('svg');
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_BdIt.eot');
+    src: url('../fonts/Aller_BdIt.eot') format('embedded-opentype'),
+        url('../fonts/Aller_BdIt.woff2') format('woff2'),
+        url('../fonts/Aller_BdIt.woff') format('woff'),
+        url('../fonts/Aller_BdIt.ttf') format('truetype'),
+        url('../fonts/Aller_BdIt.svg#Aller_BdIt') format('svg');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('../fonts/Aller_Bd.eot');
+    src: url('../fonts/Aller_Bd.eot') format('embedded-opentype'),
+        url('../fonts/Aller_Bd.woff2') format('woff2'),
+        url('../fonts/Aller_Bd.woff') format('woff'),
+        url('../fonts/Aller_Bd.ttf') format('truetype'),
+        url('../fonts/Aller_Bd.svg#Aller_Bd') format('svg');
+    font-weight: 700;
+    font-style: normal;
+}
+.rem1{
+ color: white;
+    font-size: 40px;
+}
+.rem1:hover{
+    color: red;
+}
+.wieght__title{
+  font-weight: 700;
+  border-top: 2px solid green;
+  margin-top:30px;
+  padding-top: 25px;
+}
+  p{
+    text-align: justify;
+  }
+  input:invalid {
+    background: #fdd; /* Красный цвет фона */
+   }
+   input:valid {
+    background: #dfd; /* Зеленый цвет фона */
+   }
+   .stl{
+    color: red;
+   }
+   .cod{
+    color: blue;
+   }
+    .redon:read-only {
+    opacity: 0.3; /* Полупрозрачность */
+   }
+   .place { 
+    border: 1px solid #98baba; /* Параметры рамки */
+    background: transparent; /* Прозрачный фон */
+    padding: 1px 4px; /* Поля вокруг текста */
+    color: #fff; /* Цвет текста */
+   }
+   .place::-webkit-input-placeholder{
+    color: white; /* Цвет подсказывающего текста */
+   }
+ a:link {
+    color: yellow; /* Цвет ссылок */
+   }
+   a:visited {
+    color: red;
+    font-style: 100px; /* Цвет посещенных ссылок */
+   }
+   a:active {
+    color: green; /* Цвет активной ссылки */ 
+   } 
+    .chek:checked + span {
+    background: #fc0;
+   }
+    .d:default { 
+   /* background-color: lime; */
+     background-color: red;
+   } 
+   /*.not:not([type=submit]){
+    background: green;*/
+    p .nott:not([type="submit"]){
+    background: red;
+   }
+   .disab:disabled{
+    background: blue;
+   }
+   .span:empty {
+    background: red;
+    padding: 30px;
+    margin-left: 7px;
+    display: inline-block;
+   }
+   .enab:enabled{
+   background:brown;
+   }
+   /*.f_ch p:first-child{
+    color: red;
+   }*/
+   .f_ch p:first-of-type{
+    color: blue;
+   }
+   .foc:focus{
+    background: red;
+
+   }
+   .hovers:hover{
+    font-size: 50px;
+    background: yellow;
+   }
+    .ppp::selection {
+    color: #ff0; /* Цвет текста */
+    background: #000; /* Цвет фона */
+   }
+   p.new::after {
+      content: "Новьё!"; /* Добавляемый текст */ 
+      color: #333; /* Цвет текста */ 
+      background-color: #fc0; /* Цвет фона */ 
+      font-size: 90%; /* Размер шрифта */ 
+      padding: 2px; /* Поля вокруг текста */ 
+    }
+
+  .li:before {
+     content: "¶ "; /* Добавляем желаемый символ перед элементом списка */ 
+   }
+   .li {
+     list-style: none; /* Убираем исходные маркеры */ 
+   }
+   #f-let:first-letter{
+    font-size: 40px;
+    color: red;
+   }
+   #f-line:first-line{
+    font-size: 40px;
+    color: red;
+   }

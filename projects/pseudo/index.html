@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>pseudo</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+
+<body style="font-size: 30px;">
+
+  <div class="header">
+    <div class="container">
+      <div class="row">   
+      <h1>Псевдокласи,css-властивості псевдокласів і псевдоелементів</h1>
+    
+      <div style="height: 50px;"><div class="rem1"> <b>эт сéтэра</b> </div></div>
+      <img src="img/pseudo-el-cl.jpg" alt="#" width="700" height="400">
+      <p>
+      <strong>Псевдоклас в CSS стилях – це ключове слово, яке при додаванні до селектора визначає його особливий стан. </strong>
+      </p>
+    
+      <p>Наприклад, псевдоклас :focus дозволяє застосовувати особливі CSS-стилі для елементів, які знаходяться в фокусі (наприклад, можна підсвічувати фокусне поле введення форми кольором, відмінним від інших використовуваних кольорів форми)</p>
+    
+     <p>Як вже було сказано, псевдокласи визначають стан елементів, з якими взаємодіє користувач. На відміну від псевдоелемент CSS, які задають невидимі структурні характеристики, уявні класи орієнтовані на поведінкові фактори. Щоб було зрозуміліше, можна навести невеликий приклад. Припустимо, на сайті є список корисних посилань, користувач переходить за ним, читає інформацію, але через час наштовхується на той контент, який вже бачив. Він просто перейшов на цю сторінку ще раз, адже посилань багато, і вони нічим не відрізняються. Щоб такого не відбувалося, веб-майстри додають псевдоклас, який змінює колір відвіданих посилань, тоді користувач буде точно знати, що він читав, а куди ще не переходив.</p>
+     <div>
+     <div class="wieght__title">
+       Псевдокласс :invalid
+       </div>
+       <i>    Застосовується до полів форми, вміст яких не відповідає вказаному типу. Наприклад, для type="number" повинні вводитися число, а не букви, для type="email" коректна адреса електронної пошти.</i>
+     <div class="stl">
+     < style > <br>
+    <p>input:invalid {
+    background: #fdd; /* Красный цвет фона */
+   }</p>
+   <p> input:valid {
+    background: #dfd; /* Зеленый цвет фона */
+   }</p>
+   < /style >
+   
+   </div>
+     </div>
+    <div class="cod">
+  < fоrm >"<br>
+     Адреса сайту <br>
+     < input type="url" required ><br>
+     Адреса електонної пошти <br>
+     < input type="email" required > <br>
+     < input type="submit" value="Відправити" /> <br>
+ < /form > 
+ </div>
+  <form>
+   <p>Адреса сайту</p>
+   <p><input type="url" required></p>
+   <p>Адреса електронної пошти</p>
+   <p><input type="email" required></p>
+   <p><input type="submit" value="Відправити" /></p>
+  </form>
+
+     
+  <div class="wieght__title">
+       Псевдокласс :read-only
+  </div>
+  <i>Застосовується до полів форми, у яких заданий атрибут readonly. Таке поле не може бути модифіковано і отримати фокус.
+  </i>
+   <div class="stl">
+   < style ><br>
+     .redon:read-only {<br>
+    opacity: 0.3;<br>
+   < /style ><br>
+   </div>
+   <div class="cod">
+   form><br>
+    < p >< input class="redon" type="text" name="comment" size="40" <br>
+       value="Введенный текст не может изменяться" readonly>< /p><br>
+    < p >< input class="redon" type="submit" value="Отправить">< /p><br>
+  < /form>
+  </div>
+
+
+  <form>
+    <p><input class="redon" type="text" name="comment" size="40" 
+       value="Введенный текст не может изменяться" readonly></p>
+    <p><input class="redon" type="submit" value="Отправить"></p>
+  </form>
+      </div>
+      
+ <div class="wieght__title">
+      Псевдоклас ::-webkit-input-placeholder
+  </div>
+﻿  <p>Псевдоклас, за допомогою якого задається стильове оформлення підказуючого тексту створеного атрибутом placeholder. Спільно з ::- moz - placeholder допускається використати властивості для зміни виду тексту, наприклад, задати шрифт і колір.</p>
+ 
+   <div class="stl">
+   < style ><br>
+   place { 
+    border: 1px solid #98baba; /* Параметры рамки */<br>
+    background: transparent; /* Прозрачный фон */<br>
+    padding: 1px 4px; /* Поля вокруг текста */<br>
+    color: #fff; /* Цвет текста */<br>
+   }
+   .place::-moz-placeholder {<br>
+    color: #ffd595; /* Цвет подсказывающего текста */<br>
+   }<br>
+     
+   < /style ><br>
+   </div>
+   <div class="cod">
+   form><br>
+   < form><br>
+   < p>< input type="search" placeholder="Поиск по сайту" name="q"><br>
+   < input type="submit" value="Найти">< /p><br>
+  < /form><br>
+  </div>
+  <form>
+   <p><input class="place" type="search" placeholder="Поиск по сайту" name="q">
+   <input class="place" type="submit" value="Найти"></p>
+  </form>
+
+  <div class="wieght__title">
+  Псевдоклас: link, visited, active.
+      
+  </div>
+﻿  <p>
+Псевдоклас: active визначає стиль для активного посилання. Активною посилання стає при натисканні на неї.
+</p>
+ 
+   <div class="stl">
+   < style ><br>
+   a:link {<br>
+    color: #0000d0; /* Цвет ссылок */<br>
+   }<br>
+   a:visited {<br>
+    color: #900060; /* Цвет посещенных ссылок */<br>
+   }<br>
+   a:active {<br>
+    color: #f00; /* Цвет активной ссылки */<br> 
+   } <br>
+   < /style ><br>
+   </div>
+   <div class="cod">
+    < p>< a href="task1.html">Послання1</a></p>
+  
+  </div>
+    <a href="index11.html">Зовнішнє посилання 1</a>
+  
+  
+   
+    <div class="wieght__title">
+       Псевдоклас : cheked
+       </div>
+       <i>Псевдоклас :checked застосовується до елементів інтерфейсу, таким як перемикачі (checkbox) і прапорці (radio), коли вони знаходяться в положення "включено". Перемикання елементів в такий стан відбувається за допомогою атрибуту checked тега  < input> чи користувачем.
+
+       </i>
+      
+
+<p><strong>С какими операционными системамы вы знакомы?</strong></p>
+  <p><input class="chek" type="checkbox" name="a1"><span>Windows 7</span><br>
+  <input class="chek" type="checkbox" name="a2"><span>Windows Vista</span><br>
+  <input class="chek" type="checkbox" name="a3"><span>Windows XP</span><br>
+  <input class="chek" type="checkbox" name="a4"><span>System X</span><br> 
+  <input class="chek" type="checkbox" name="a5"><span>Linux</span><br> 
+  <input class="chek" type="checkbox" name="a6"><span>Mac OS</span></p>
+  <p><input type="submit" value="Отправить"></p>
+
+   <div class="wieght__title">
+      Псевдокласс :default
+       </div>
+       <i>
+        Псевдоклас :default застосовує стиль до елементів форм, які встановлені за умовчанням в групі схожих елементів.
+       </i>
+  <form>
+   <p><input class="d" type="submit"> <input class="d" type="submit"> <input class="d" type="reset"></p>
+  </form>
+   <div class="wieght__title">
+      Псевдокласс :not
+       </div>
+       <i>
+        Псевдоклас: not задає правила стилів для елементів, які не містить вказаний селектор.
+       </i>
+   <form>
+   <p>Ваше имя: <input class="nott" name="user"></p>
+   <p>Прилагаемый файл: <input class="nott" type="file" name="file"></p>
+   <p><input class="nott" type="submit" value="Отправить"></p>
+  </form>
+  <div class="wieght__title">
+      Псевдокласс :disabled;
+       </div>
+       <i>
+       Псевдоклас: disabled використовується для застосування стилю до заблокованих елементів форм. Такі елементи не можуть отримати фокус, бути натисненими або активовані, в текстових полях можна набирати текст.
+       </i>
+       <input class="disab" type="text" name="" disabled>
+       <input class="disab" type="text" name="" >
+    <div class="wieght__title">
+     Псевдоклас: empty   
+    </div>
+       <i>
+     Псевдоклас: empty представляє порожні елементи,
+      іншими словами такі, які не містять дочірніх елементів,
+       тексту або прогалин. Наприклад, < p > < / p> є порожнім елементом,
+        а  < p > & nbsp; < / p >  вже не є.
+       </i>  
+       <p>Линеарная фактура, в том числе, иллюстрирует фузз, и здесь мы видим 
+  ту самую каноническую секвенцию с разнонаправленным шагом 
+  отдельных звеньев<span class="span"></span></p>  
+
+       <div class="wieght__title">
+      Псевдокласс :enabled
+       </div>
+       <i>
+    Псевдоклас: enabled використовується для застосування стилю до доступним (не заблокований) елементам форм. За замовчуванням, всі елементи форм є доступними, якщо в коді HTML до них не додається атрибут disabled.
+       </i>   
+     <form>
+   <p>Типовой договор</p>
+   <p><input class="enab" type="checkbox" name="agree" onclick="agreeForm(this.form)"> 
+   Я согласен со всеми условиями</p>
+   <p><input class="enab" type="submit" name="submit" value="Отправить" disabled></p>
+  </form>
+
+
+       <div class="wieght__title">
+      Псевдокласс :first-child
+       </div>
+       <i>
+       Псевдоклас: first-child застосовує стильове оформлення до першого дочірньому елементу свого батька.
+    
+       </i>  
+       <div class="f_ch">
+         <p>111111</p>
+         <p>222222</p>
+         <p>333333</p>
+       </div> 
+       <div class="wieght__title">
+        Псевдоклас: focus
+       </div>
+       <i>
+       Псевдоклас: focus визначає стиль для елемента, що отримує фокус. Наприклад, ним може бути текстове поле форми в яке встановлюється курсор.
+    
+       </i> 
+       <form action="login.php" method="post" id="enter">
+   <div class="form-item">
+     <span class="label">Логин:</span>
+     <input  class="foc" type="text" name="login" value="" class="form-text">
+   </div>
+   <div class="form-item">
+     <span class="label">Пароль:</span>
+     <p><input type="password" class="foc" name="pass" ></p>
+   </div>
+   <p><input class="foc" type="submit" value="Войти" /></p>
+  </form>  
+       <div class="wieght__title">
+       Псевдоклас: hover
+      
+       </div>
+       <i>
+    Визначає стиль елементу при наведенні на нього курсора миші, але при цьому елемент ще не активований.
+       </i>  
+       <div class="hovers">Наведи</div> 
+
+<div class="wieght__title">
+      Псевдоклас :indeterminate 
+       </div>
+       <i>
+      Псевдоклас: indeterminate задає стиль для елементів форм, таким як прапорці і перемикачі, коли вони знаходяться в невизначеному стані. Наприклад, якщо з групи прапорців жоден з них не позначений, то прапорці знаходяться в зазначеному стані. У реальності, стиль застосовується тільки до елементів, у яких DOM-атрибут: indeterminate через JavaScript встановлений в значення true.
+    
+       </i>   
+<div class="wieght__title">
+       Псевдоклас: last-child
+       </div>
+       <i>
+    Псевдоклас: last-child задає стильове оформлення останнього елемента свого батька.
+       </i>   
+<div class="wieght__title">
+    Псевдокласс :last-of-type  
+       </div>
+       <i>
+    Псевдоклас: last-of-type задає правила стилів для останнього елемента в списку дочірніх елементів свого батька. Наприклад, додавання: last-of-type до селектору li встановлює стиль тільки для останнього пункту списку, при цьому не поширюється на інші пункти.
+       </i>   
+
+<div class="wieght__title">
+     Псевдоклас:nth-child 
+       </div>
+       <i>
+       Псевдоклас: nth-child використовується для додавання стилю до елементів на основі нумерації в дереві елементів.
+    
+       </i>   
+<div class="wieght__title">
+  Псевдоклас: nth-last-child
+       </div>
+       <i>
+    Псевдоклас: nth-last-child використовується для додавання стилю до елементів на основі нумерації в дереві елементів. На відміну від псевдокласу: nth-child відлік ведеться не від першого елемента, а від останнього.
+       </i>   
+<div class="wieght__title">
+     Псевдокласс :optional 
+       </div>
+       <i>
+   Застосовує стильові правила до тегу < input>, у якого не заданий атрибут required. Він дозволяє виділяти поля обов'язкові до заповнення перед відправкою форми. Таким чином: optional застосовується до необов'язковим полях форми. 
+       </i>   
+<div class="wieght__title">
+    Псевдоклас: root  
+       </div>
+       <i>
+    Псевдоклас: root визначає кореневий елемент документа. В HTML цей селектор завжди відповідає елементу < html>.
+       </i>   
+<div class="wieght__title">
+      Псевдоклас :target
+       </div>
+       <i>
+    Для переходу до вибраного фрагменту документа, в адресі пишеться символ # і вказується ім'я ідентифікатора. Наприклад, в адресі http://www.w3.org/TR/css3-selectors/#target-pseudo відбувається перехід до елементу, атрибут id якого заданий як target-pseudo. Такий запис адреси називається «цільової елемент». Псевдоклас: target застосовується до цільового елементу, іншими словами, до ідентифікатора, який вказаний в адресному рядку браузера.
+       </i> 
+
+       <h2 style="margin-top: 40px;"><strong>Псевдоелементи</strong></h2>
+       <p>В HTML-файлі немає жодного тега, який би відповідав за дизайн великої літери нового абзацу або області, що перебуває перед певним елементом. Та й тегами неможливо показати активність посилань або змінити зображення, коли курсор мишки наводять на нього. Щоб оформити ці та безліч інших значень, існують селектори CSS: псевдокласи і псевдоелементи. Псевдоклассами називають селектори, які впливають на існуючі елементи документа. Псевдоэлементами зазвичай задають і змінюють область, яка спочатку була відсутня у вихідному файлі. Простіше кажучи, псевдоелементи задають нові сторінки, яких не було в HTML-розмітки, а псевдокласи визначають стан об'єктів за певних умов.</p>  
+       <img src="img/image.png" alt="#" width="700" height="400">
+       <div class="wieght__title">
+         Псевдоелемент :: - moz-selection
+       </div>
+       <i>
+       Псевдоелемент :: - moz-selection застосовується до виділеного користувачем фрагменту документа. У правилах стилів має використовуватися виключно такі властивості: color, background і background-color.
+
+:: - moz-selection нестандартний псевдоелемент і підтримується тільки браузером Firefox починаючи з версії 1.0.
+
+       </i> 
+       <div class="wieght__title">
+   Псевдоелемент ::-ms-browse
+       </div>
+       <i>
+    Дозволяє задати стиль кнопки «Огляд» при завантаженні файлів через < input type = "file"> в Internet Explorer.
+       </i> 
+       <div class="wieght__title">
+    Псевдоелемент ::-ms-check
+       </div>
+       <i>
+    Задає стиль перемикачів (input type = "radio") і прапорців (input type = "checkbox").
+       </i> 
+       <div class="wieght__title">
+          Псевдоелемент :: selection
+       </div>
+       <i>
+       Псевдоелемент :: selection застосовує стиль до виділеного користувачем тексту. У правилах стилів допускається використовувати такі властивості: color, background і background-color
+    
+       </i> 
+       <p class="ppp">rrrrrrrrrrrrrrrrrr ttttt wwwwww</p>
+       <div class="wieght__title">
+          Псевдоклас:-ms-clear
+       </div>
+       <i>
+    Задає стиль кнопки для очищення текстового поля. Початково ця кнопка, хоч я знаю, вона з'являється в правій частині поля тільки при введенні тексту.
+       </i> 
+      
+  
+       <div class="wieght__title">
+        Псевдоклас: -ms-expand 
+       </div>
+       <i>
+       Задає стиль кнопки розкриття списку, створеного за допомогою тега < select> вбраузері Internet Explorer.
+    
+       </i> 
+       
+       <div class="wieght__title">
+         Псевдоелемент ::-ms-fill
+       </div>
+       <i>
+    Задає стиль індикатора елементу < progress > в браузері Internet Explorer. Саме значення індикатора і його становище змінюється динамічно за допомогою скриптів.
+       </i> 
+       <div class="wieght__title">
+        Псевдоклас: after
+       </div>
+       <i>
+    Псевдоелемент, який використовується для виведення бажаного тексту після вмісту елемента, до якого він додається. Псевдоелемент :: after працює спільно з властивістю content.
+
+Для :: after характерні наступні особливості.
+
+При додаванні :: after до блокового елементу, значення властивості display може бути тільки: block, inline, none, marker. Всі інші значення будуть трактуватися як block.
+При додаванні :: after до вбудованого елементу, display обмежений значеннями inline і none. Всі інші будуть сприйматися як inline.
+       </i>
+        <h2>Истории</h2>
+  <p class="new">История о том, как возле столовой появились загадочные розовые следы с шестью пальцами, и почему это случилось.</p>
+  <p>История о том, как возле столовой появились загадочные розовые
+     следы с шестью пальцами, и почему это случилось.</p> 
+      
+
+<div class="wieght__title">
+    Псевдоелемент:before
+       </div>
+       <i>
+       Псевдоелемент: before застосовується для відображення бажаного контенту до вмісту елемента, до якого він додається. Працює спільно з властивістю content.
+
+Для: before характерні наступні особливості.
+
+При додаванні: before до блокового елементу, значення властивості display може бути тільки: block, inline, none, list-item. Всі інші значення будуть трактуватися як block.
+При додаванні: before до вбудованого елементу, display обмежений значеннями inline і none. Всі інші будуть сприйматися як inline.
+: Before успадковує стиль від елемента, до якого він додається
+       </i>
+    <ul>
+     <li class="li">Альфа</li>
+     <li class="li">Бета</li>
+     <li class="li">Гамма</li>
+   </ul>
+       <div class="wieght__title">
+  Псевдоелемент: first-letter
+       </div>
+       <i>
+       Псевдоелемент: first-letter визначає стиль першого символу в тексті елемента, до якого додається. До цього псевдоелементу можуть застосовуватися тільки стильові властивості, пов'язані з властивостями шрифту, полями, відступами, кордонами, кольором і фоном.
+       </i>
+       <p id="f-let">
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy   </p>
+   <div class="wieght__title">
+  Псевдоэлемент :first-line
+       </div>
+       <i>
+       Псевдоэлемент :first-line задает стиль первой строки форматированного текста. Длина этой строки зависит от многих факторов, таких как используемый шрифт, размер окна браузера, ширина блока, языка и т.д. В правилах стиля допустимо использовать только свойства, относящиеся к шрифту, изменению цвета текста и фона.
+       </i>
+        <p id="f-line">
+       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy   </p>
+   <div class="wieght__title">
+  
+       </div>
+       <i>
+       </i>
+   
+<div class="wieght__title">
+  
+       </div>
+       <i>
+       </i>
+   <div class="wieght__title">
+  
+       </div>
+       <i>
+       </i>
+   <div class="wieght__title">
+  
+       </div>
+       <i>
+       </i>
+   
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+
+</body>
+
+</html>
