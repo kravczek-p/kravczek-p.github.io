@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<!--  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"> -->
+	<!-- Latest compiled and minified CSS -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+ -->
+<style>
+.qw1{
+	width: 100px;
+	height: 100px;
+	background: yellow;
+}
+.qw2{
+	width: 100px;
+	height: 100px;
+	background: blue;
+}
+.qw3{
+	width: 100px;
+	height: 100px;
+	background: red;
+}
+pre{
+	white-space: nowrap;
+}
+.re{
+	white-space:pre-wrap;
+}
+.raipad{
+	padding-right: 500px;
+}
+
+h2,h1{
+	margin: 0 auto;
+	font-size: 40px;
+	color: #d69285;
+
+}
+p{
+	font-size: 30px;
+	text-align: justify;
+}
+.ah1{
+	margin-bottom: 15px;
+}
+.pe{
+	border: 2px dashed blue;
+}
+#peeden{
+	background: #d69285;
+	width: 300px;
+	height: 300px;
+}
+#pedwa{
+	background: #1babd9;
+	width: 50px;
+	height: 50px;
+}
+@media(min-width:1200px){
+    #peeden{
+    	width: 80%;
+    }
+    #pedwa{
+    	width: 150px;
+    	height: 150px;
+    }
+}
+@media(min-width:992px){
+    #peeden{
+    	width: 80%;
+    }
+    #pedwa{
+    	width: 100px;
+    	height: 100px;
+    }
+}
+tr th, tr td{
+	/*text-align: center;*/
+	padding: 20px;
+	font-size: 25px;
+}
+tr:first-of-type{
+	background: #C0C0C0;
+}
+tr th:last-of-type{
+	text-align: center;
+}
+.one{
+	background: #FFC0CB;
+}
+.two{
+	background: #FFFACD;
+}
+.three{
+	background: #FFE4B5;
+}
+.four{
+	background: #C0C0C0;
+}
+.five{
+	background: #FFFFF0;
+}
+.sixe{
+	background: #E6E6FA;
+}
+.seven{
+	background: #00FFFF;
+}
+.eight{
+	background: #708090;
+}
+.nine{
+	background: #DAA520;
+}
+.fourteen{
+	background: #DCDCDC;
+}
+.all{
+	padding: 10px;
+}
+ol{
+	display: block;
+}
+ol li{
+	font-size: 27px;
+}
+</style>
+
+</head>
+<body>
+<div class="container">
+	<div class="row">
+	<h1 style="margin-bottom: 30px;margin-top: 20px;">АДАПТИВНИЙ ДИЗАЙН.
+ЗНАЙОМСТВО З BOOTSTRAP</h1>
+</div>
+<div class="container">
+	<div class="row">
+<ol>
+	<li class="all one">Медіа запити як інструмент значно підвищити гнучкість макета</li>
+	<li class="all two">media types</li>
+	<li class="all three">media features</li>
+	<li class="all four">Проблема багатьох пристроїв. Поняття адаптивного макету.</li>
+	<li class="all five">Область перегляду (viewport)</li>
+	<li class="all sixe">Медіа запити для побудови адаптивного макету. Точки зміни (breakpoint)
+</li>
+<li class="all seven">Каркаси CSS (CSS Frameworks) - мета створення і проблематика</li>
+<li class="all eight">Bootstrap як один з основних каркасів</li>
+<li class="all nine">Підключення. Залежність від JQuery</li>
+<li>Параметри області відображення - мета параметр viewport</li>
+<li>Основний контейнер - класси container та container-fluid</li>
+	<li>Підхід до позиціонування на основі рядків та колонок.</li>
+	<li>Сітка bootstrap (bootstrap grid)</li>
+	<li class="all fourteen">Примусове позиціонування на сітці - push, pull. Offset</li>
+	<li>Адаптивність - xs, xl, ….</li>
+	<li>Поняття навігаційного меню та вимоги до нього</li>
+	<li>navbar в bootstrap
+</li>
+</ol>
+
+
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+		
+	
+<div class="all seven">
+  <p>
+			Фреймворк це програмна оболонка, що дозволяє спростити і прискорити рішення типових завдань, характерних для цієї мови програмування. Саме слово framework означає "каркас" в перекладі з англійської. Дійсно, фреймворки і покликані бути готовими каркасами програм, на які тільки і залишається навісити стіни і вікна. Головне при цьому не залишати дір :) Класичним прикладом фреймворка для популярної мови Javascript являється jQuery - бібліотека з готовими функціями візуальних ефектів, AJAX- запитів і інших корисних речей. Для програмування на PHP існують десятки фреймворков, наймоднішим з яких являється Yii
+		</p>
+
+
+		<p>
+			Фреймворк это программная оболочка, позволяющая упростить и ускорить решение типовых задач, характерных для данного языка программирования. Само слово framework означает «каркас» в переводе с английского. Действительно, фреймворки и призваны быть готовыми каркасами программ, на которые только и остаётся навесить стены и окна. Главное при этом не оставлять дыр :)
+
+Классическим примером фреймворка для популярного языка Javascript является jQuery – библиотека с готовыми функциями визуальных эффектов, AJAX-запросов и прочих полезных вещей. Для программирования на PHP существуют десятки фреймворков, самым модным из которых является Yii.
+		</p>
+	</div>	
+	</div>
+</div>
+
+<div class="container">
+<div class="row">
+	<h1 class="header__title">Bootstrap</h1>
+</div>
+	 <div class="row">
+	
+	
+		
+	</div> 
+	<div class="header__subtitle"><h3>Адаптивний веб-дизайн</h3>
+	<div class="all one">
+	<p>
+		Responsive web design — оптимальний дизайн сайту, що забезпечує представлення
+		сторінок на різних по формату пристроях. При використанні данної технології не потрібні окремі версії для різних за розміром екранів.
+
+
+	   <p>
+	   	Такий, що виглядає добре на всих пристроях
+	   	без зміни вигляду, але з урахуванням способів виведення на екрани різних 
+	   	розмірів.
+	   </p>
+	   <p>На сьогднішній день мобільні пристрої використовуються частіше для виходу в Інтернет ніж інші.</p>
+	   <p>Google накладає штрафні санкції на сайти за невідповідність інтерфейсу стандартам мобільних пристроїв. </p>
+	   </div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="ah1"><h1>Media Queres</h1></div>
+			<div id="peeden"></div>
+			<div id="pedwa"></div>
+		</div>
+	</div>
+	
+
+<div class="all two">
+  <table border="4" style="margin-top: 30px;">
+   <caption style="font-size:30px;">всі запити починаються з правила @media, після чого слід умова, в якій використовуються типи носіїв, логічні оператори і медіа-функції. Типи носіїв.</caption>
+   <tr>
+    <th>type</th>
+    <th>description</th>
+    <!-- <th>Европа</th>
+    <th>Длина ступни, см</th> -->
+   </tr>
+   <tr><td>all</td><td>Усі типи. Це значення використовується за умовчанням.</td>
+   <tr><td>braille	</td><td>Пристрої, грунтовані на системі Брайля, які призначені для читання сліпими </td></tr>
+   <tr><td>embossed	</td><td>Принтери, що використовують для друку систему Брайля.</td></tr>
+   <tr><td>handheld	</td><td>Смартфони і аналогічні їм апарати.</td></tr>
+   <tr><td>print	</td><td>Принтери і інші друкуючі пристрої.</td></tr>
+   <tr><td>projection	</td><td>Проектори.</td></tr>
+   <tr><td>screen	</td><td>Екран монітора.</td></tr>
+   <tr><td>speech	</td><td>Мовні синтезатори, а також програми для відтворення тексту вголос. Сюди, наприклад, можна віднести мовні браузери.</td></tr>
+   <tr><td>tty</td><td>Пристрої з фіксованим розміром символів (телетайпи, термінали, пристрої з обмеженнями дисплея).</td></tr>
+   <tr><td>tv</td><td>Телевізори</td></tr>
+  </table>
+ 
+
+
+
+	<p>Перший раз таке випробування, коли розмір сторінки сайту змінювався в залежності від ширини екрану було проведенв 2001 році в браузері 
+	 Internet Explorer</p>
+	<p>В 2010 році були описані основні принципи адаптивного веб-дизайну</p>
+	<p>На сьогоднішній день існує два підходи його побудови</p>
+	<p>Перший- розробка починається з мобільного інтефейсу, а потім адаптація на ішші. Другий - коли основним дизайном є проект для великих екранів</p>
+	<p>breakpoint</p>
+</div>
+ </div>  
+ <div class="container">
+ 	<div class="row">
+ 		<div class="all three">
+ 		<p>
+ 		  Медиа-функции
+Медиа-функции задают технические характеристики устройства, на котором отображается документ. Стиль выполняется в том случае, если запрос возвращает истину, иными словами, указанные условия выполняются.
+
+Большинство функций содержат приставку min- и max-, которая соответствуют минимальному и максимальному значению. Так, max-width: 400px означает, что ширина окна браузера меньше 400 пикселов, а min-width: 1000px, наоборот, сообщает, что ширина окна больше 1000 пикселов.
+
+aspect-ratio (min-aspect-ratio, max-aspect-ratio)
+Тип носителя: handheld, print, projection, screen, tty, tv
+Значение: целое число/целое число
+
+Определяет соотношение ширины и высоты отображаемой области устройства. Значение указывается в виде двух целых чисел разделяемых между собой слэшем (/).
+
+color (min-color, max-color)
+Тип носителя: handheld, print, projection, screen, tty, tv
+Значение: целое число
+
+Определяет число бит на канал цвета. К примеру, значение 3 означает, что красный, зелёный и синий канал могут отображать 23 цветов каждый, что в общем составляет 512 цветов (8×8×8). Если значение не указано, тогда проверяется что устройство цветное. В примере 1 показана такая проверка.
+
+Пример 1. Стиль для цветных устройств
+
+@media screen and (color) { /* Для цветных экранов */
+  body { background: #fc0; }
+}
+@media screen and (min-color:3) { /* Минимум 512 цветов */
+  body { background: #ccc; }
+}
+color-index (min-color-index, max-color-index)
+Тип носителя: handheld, print, projection, screen, tty, tv
+Значение: целое число
+
+Определяет количество цветов, которое поддерживает устройство. В примере 2 показан стиль для экранов отображающих не меньше 256 цветов.
+
+Пример 2. Цветной дисплей
+
+@media all and (min-color-index: 256) {
+ ...
+}
+device-aspect-ratio (min-device-aspect-ratio, max-device-aspect-ratio)
+Тип носителя: handheld, print, projection, screen, tty, tv
+Значение: целое число/целое число
+
+Определяет соотношение сторон экрана устройства. Значение указывается в виде двух целых чисел разделяемых между собой слэшем (/). В примере 3 показано, как установить стиль для экранов с соотношением сторон 16:9 и более.
+
+Пример 3. «Киношное» соотношение
+
+@media screen and (min-device-aspect-ratio: 16/9) {
+ ...
+}
+device-height (min-device-height, max-device-height)
+Тип носителя: все кроме speech 
+Значение: размер
+
+Определяет всю доступную высоту экрана устройства или печатной страницы.
+
+device-width (min-device-width, max-device-width)
+Тип носителя: все кроме speech 
+Значение: размер
+
+Определяет всю доступную ширину экрана устройства или печатной страницы. В примере 4 в зависимости от разрешения монитора устанавливается ширина слоя. Так, для значения 1280 пикселов ширина макета задаётся как 1100px.
+</p>
+ 			
+ 		</div>
+ 	</div>
+ </div>      
+
+<div class="container">
+	<div class="row">
+	<div class="all four">
+		<h2>Twitter bootstrap</h2>
+		<p>Користувачі заходять в інтернет з різних пристроїв: комп'ютерів, ноутбуків, планшетів, смартфонів. У різних моделей може бути різний дозвіл екрану, і якщо сайт некоректно відображається, частина користувачів закриє ресурс.
+
+Для мобільного перегляду веб-мастеры залежно від потреб бізнесу вибирають спосіб відображення сайту : розробляють окрему мобільну версію, роблять адаптивне верстання або динамічну - RESS (Responsive Design Server Side). Для коректного відображення проекту на різних моделях планшетів і десктопів також потрібний адаптив під різні дозволи.
+
+Розмір, дозвіл екрану, щільність пікселів у різних пристроїв відрізняються. Виділяють такі показники:
+
+діагональ екрану - розмір дисплея в дюймах, вимірюється від кута до кута;
+розмір екрану в точках - кількість точок, їх пристрій використовує для координат;
+повне число пікселів (Rendered Pixels), яке візуалізує пристрій. Значення рахують за допомогою множника 1x, 2x, 3x, який пристрій використовується</p>
+<p>
+	Для мобільного перегляду веб-мастеры залежно від потреб бізнесу вибирають спосіб відображення сайту : розробляють окрему мобільну версію, роблять адаптивне верстання. Для коректного відображення проекту на різних моделях планшетів і десктопів також потрібний адаптив 
+фізичні пікселі - фактичний дозвіл екрану в пікселях; у екранах Retina, які використовують сучасні моделі техніки Apple, більш високе розділення зображення на екрані з меншою кількістю фізичних пікселів.
+Приміром, візьмемо смартфони: у IPhone 3 з діагоналлю 3.5" фізичний дозвіл екрану 320x480px, а щільність пікселів 163ppi. Дозвіл відповідає діагоналі, щільність пікселів невисока. Якщо відобразити на нім текст, набраний розміром 16px, він читатиметься так само добре, як і на екрані комп'ютера. Модель IPhone 6 Plus з дисплеєм Retina використовує більш високе розділення зображення на екрані. 
+</p>
+</div>
+<p class="all five">
+	<strong>Мета-тег "viewport" і CSS правило @viewport</strong>
+Правило @viewport розробила компанія Windows, зараз воно підтримується декількома браузерами, але очікується, що стане майбутнім стандартом для веб.
+
+Розробники контролюють масштаб відображення сторінки сайту у вікні пристрою за допомогою мета-тега "viewport" або правила @viewport, яке управляє масштабуванням за допомогою CSS. Тег використовують для адаптивних сайтів і для ресурсів з фіксованою або гнучкою розміткою у тому числі.
+</p>
+<div class="all five">
+<p class="all five">
+	<b>Як і де вказувати тег "viewport"</b>
+
+Сторінки сайту повинні коректно відображатися на різних дисплеях, для цього в HTML- сторінку треба включити мета-тег "viewport", а в CSS додати правило @viewport.
+
+Мета-тег "viewport" розміщують у блок < head > у такому вигляді:
+
+<!-- <meta name="viewport" content="width=device - width, initial - scale=1"> -->
+Особливості підтримки правила @viewport браузерами є в специфікації. Поки воно мало поширене, але швидше за все стане стандартом в CSS.
+
+@viewport { width: device - width;}
+Зараз до правила @viewport рекомендують додавати вендорный префікс:
+
+@- ms - viewport { 
+width: device - width;
+}
+@- o - viewport { 
+width: device - width;
+}
+@viewport { 
+width:
+</p>
+<p class="all five">
+	<b>Як настроїти розмір вікна перегляду</b>
+Атрибут "width" адаптує ширину вікна перегляду до екрану пристрою. Вказують або ціле ненегативне значення від 200px до 10 000px, або константу "device-width" - вона означає, що пристрій масштабує ширину сторінки під розмір екрану.
+
+Веб-майстер може встановити конкретне число пікселів в цьому атрибуті, приміром, width=600. Так роблять, якщо макет має бути не менше 600px шириною. Якщо екран виявиться більше, браузер не збільшуватиме масштаб, а стане розширювати область перегляду, щоб вона розтягнулася до розмірів екрану.
+
+ &lt;meta name="viewport" content="width=600, initial - scale=1" >
+Приміром, на більшості смартфонів діє стандарт "device-width" в 320px. Якщо користувач дивиться сайт з мобільного пристрою дисплеєм 640px, зображення шириною 320px займе увесь екран, використовуючи подвоєну кількість пікселів. Оскільки екран використовує подвоєну щільність пікселів в порівнянні із стандартним монітором
+</p>
+</div>
+	</div>
+</div>
+<div class="container">
+	<h3>Файлова структура Bootstrap 3</h3>
+</div>
+
+
+<div class="container">
+<div class="row">
+
+<div style="clear: left">
+	<p>
+	bootstrap/<br>	
+├── css/<br>	
+│   ├── bootstrap.css <br>	
+│   ├── bootstrap.min.css <br>	
+│   ├── bootstrap-theme.css <br>	
+│   └── bootstrap-theme.min.css  <br>	
+├── js/ <br>	
+│   ├── bootstrap.js <br>	
+│   └── bootstrap.min.js <br>	
+└── fonts/ <br>	
+    ├── glyphicons-halflings-regular.eot <br>	
+    ├── glyphicons-halflings-regular.svg <br>	
+    ├── glyphicons-halflings-regular.ttf  <br>	
+    └── glyphicons-halflings-regular.woff <br>	
+</p>
+
+</div>
+  </div>  
+
+</div>
+	</div>
+
+<div class="container">
+	<div class="row">
+	<pre>
+		<div class="re">
+       <p>
+ bootstrap/
+├── less/
+├── js/
+├── fonts/
+├── dist/
+│   ├── css/
+│   ├── js/
+│   └── fonts/
+└── docs/
+    └── examples/
+       </p>
+            	
+            
+		</div>
+		</pre>
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	<pre>
+		<div class="re sixe all">
+   <p> 
+			@ import url(css/kase.css);
+			@ import url(css/centrum.css) (min-width:481px) and (max-width:768);
+			@ import url(css/litle.css) (max-width: 480px);
+	 </p> 
+	 <p>
+			< link href="css/medium.css" rel="stylesheet" media="(min-width:481px) and (maxwidth:768px)">
+	 </p>
+
+
+       <p>
+    /* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+/* Styles */
+}
+
+/* Smartphones (landscape) ----------- */
+@media only screen and (min-width : 321px) {
+/* Styles */
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+/* Styles */
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+/* Styles */
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+/* Styles */
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+/* Styles */
+}
+/**********
+iPad 3
+**********/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+/* Desktops and laptops ----------- */
+@media only screen  and (min-width : 1224px) {
+/* Styles */
+}
+
+/* Large screens ----------- */
+@media only screen  and (min-width : 1824px) {
+/* Styles */
+}
+
+/* iPhone 4 ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : landscape) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) and (orientation : portrait) and (-webkit-min-device-pixel-ratio : 2) {
+/* Styles */
+}
+
+/* iPhone 5 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 568px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6, 7, 8 ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 667px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone 6+, 7+, 8+ ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 736px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* iPhone X ----------- */
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 375px) and (max-device-height: 812px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* iPhone XS Max, XR ----------- */
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 414px) and (max-device-height: 896px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S3 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 2){
+/* Styles */
+}
+
+/* Samsung Galaxy S4 ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+/* Samsung Galaxy S5 ----------- */
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : landscape) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-height: 640px) and (orientation : portrait) and (-webkit-device-pixel-ratio: 3){
+/* Styles */
+}
+
+       </p>
+            	
+            
+		</div>
+		</pre>
+	</div>
+</div>
+<div class="container">
+	<div class="row">
+	<div class="all eight">
+		<p>
+			Bootstrap — це безкоштовний набір інструментів з відкритим кодом, призначений для створення веб-сайтів та веб-додатків, який містить шаблони CSS та HTML для типографіки, форм, кнопок, навігації та інших компонентів інтерфейсу, а також додаткові розширення JavaScript. Він спрощує розробку динамічних веб-сайтів і веб-додатків.
+
+Bootstrap — це клієнтський фреймворк, тобто інтерфейс для користувача, на відміну від коду серверної сторони, який знаходиться на сервері. Репозиторій із цим фреймворком є одним із найпопулярніших на GitHub.[3] Серед інших, його використовують NASA і MSNBC[4][5].
+		</p>
+		<p>
+			Історія створення
+Bootstrap (початкова назва — Twitter Blueprint) був розроблений Марком Отто та Джейкобом Торнтоном як фреймворк для забезпечення однаковості внутрішніх інструментів Twitter. До появи Bootstrap у розробці інтерфейсу застосовувалися різні бібліотеки, що призводило до появи суперечностей та ускладнювало супровід. За словами Марка Отто:
+
+«	Маленька група розробників, до складу якої входив і я, спроектувала й побудувала новий внутрішній інструмент, що мав потенціал для створення ширшого рішення. За кілька місяців з'явилася початкова версія Bootstrap, яка є засобом для документування та поширення загальних шаблонів і засобів проектування всередині компанії[6].	»
+Через кілька місяців до розробки рішення долучилося багато розробників компанії Twitter. Проект було перейменовано з Twitter Blueprint на Bootstrap. Реліз із відкритим сирцевим кодом вийшов 19 серпня 2011 року. Нині проект підтримується невеликою групою розробників на чолі з Марком Отто та Джейкобом Торнтоном, а також широкою спільнотою прихильників.
+		</p>
+	</div>
+		
+	</div>
+</div>
+
+<div class="container">
+	<div class="row">
+	
+		<div class="re nine all">
+       <p>
+        &lt;!DOCTYPE html>
+        &lt;html lang="en">
+        &lt;head>
+	    &lt;meta charset="utf-8">
+	    &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+	    <-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and 
+	media queries -->
+	    <-- WARNING: Respond.js does`t work if you view the page fia file:// -->
+
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1">
+
+        &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"> -->
+        &lt;!--[if lt IE 9]>
+        &lt;script_"https://oss.maxcdn.com/html5shiv/3.7.2/html5.min.js">&lt;/script>
+        &lt;script "https://oss.maxcdn.com/respond/1.4.2/respond.min.js">&lt;/script>
+        &lt;!endif-->
+        &lt;title>Bootstrap starter page&lt;/title>
+        &lt;link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+        &lt;link rel="stylesheet" type="text/css" href="css/styles.css">
+        &lt;body>
+        	&lt;h1>Hellow Brain Basket!&lt;/h1>
+        	&lt;!--JQuery Bootstrap JS plugins depend on it-->
+        	&lt;script scr="js/jquery-1.11.3.min.js">&lt;/script>
+        	&lt;script scr="js/bootstrap.min.js">&lt;/script>
+        	&lt;script scr="js/script.js">&lt;/script>
+        	
+        &lt;/body>
+       </p>
+       </div>
+   </div>
+ </div>
+ <div class="container">
+   <div class="row">
+   <div class="all fourteen">
+
+
+      <div class="col-md-4">
+      	<div class="qw1">111</div>
+      </div>
+       <div class="col-md-4">
+      	<div class="qw2">222</div>
+      </div>
+       <div class="col-md-4">
+      	<div class="qw3">333</div>
+      </div>
+
+     </div>
+   	
+   </div>
+ 	
+ </div>
+
+
+
+
+
+
+
+
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+</body>
+</html>
