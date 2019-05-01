@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>exercise two</title>
+</head>
+
+<body>
+    <script>
+    function one(){
+     n=prompt("введите положительное число не больше 359999");  
+     if(n>359999 || n<0)boo=0;
+     else boo=1;
+    }
+    boo=0;
+    while(boo==0){
+       one(); 
+    }
+      
+      if(n>359999)n=prompt("359999");  
+    
+       hours=Math.floor(n/3600);
+       minets=Math.floor((n%3600)/60);
+       second=(n%3600)%60;
+       alert(hours+": "+minets+" :"+second);
+
+    </script>
+
+</body>
+
+</html>
