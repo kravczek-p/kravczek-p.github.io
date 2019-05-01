@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pr_0502</title>
+</head>
+
+<body>
+    <script>
+   let str1=prompt('Введите первую строку');
+    let str2=prompt('Введите вторую строку');
+    alert(scramble(str1,str2));
+    function  scramble(str1,str2){
+    boo=true;
+    for(var i=0;i<str2.length;i++){
+        b=0;
+      for(var j=0;j<str1.length;j++){
+         if(str2[i]==str1[j])b=1;
+    }
+    if(b!=1){
+        boo=false;break;
+       }
+}
+return boo;
+}
+
+
+    </script>
+
+</body>
+
+</html>
