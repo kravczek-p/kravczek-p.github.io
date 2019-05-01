@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>pr_0503</title>
+</head>
+
+<body> 
+ <script>
+let str=prompt("Введите строку");
+strArray=str.split(' ');
+for(var i=0;i<strArray.length;i++){
+
+ if(strArray[i]!="!" && strArray[i]!="?") strArray[i]=strArray[i].substring(1,strArray[i].length)+strArray[i].substring(0,1)+"ay";
+}
+ newstr=strArray.join(" ");
+alert(newstr);
+
+ </script>
+
+</body>
+
+</html>
