@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>#практика05_01</title>
+
+<style>
+  input{
+    width: 360px;
+  }
+</style>
+</head>
+<body>  
+  <input id="age" type="text" name="age" onblur="funTime()" placeholder="введите положительное число не больше 359999">
+  <button>click mi</button>
+<script>
+let funTime=function(){
+    elems=age.value;  
+  if(elems.match(/^\d+$/) && (elems>0 && elems<=359999)){
+    n=elems; 
+    hours1=(Math.floor((+n/3600)/10));
+    hours2=(Math.floor(+n/3600)%10);
+    minut1=Math.floor((Math.floor(+n%3600)/60)/10);
+    minut2=Math.floor((Math.floor(+n%3600)/60)%10);
+    second1=Math.floor(((n%3600)%60)/10);
+    second2=Math.floor(((n%3600)%60)%10);
+    alert(""+hours1+(+hours2)+":"+(+minut1)+(+minut2)+":"+(+second1)+(+second2));
+  }
+  else{
+    alert("Введите правильно чисо секунд");
+  }
+}
+</script>
+</body>
+</html>
