@@ -21,7 +21,7 @@
   
 }
  .noneTwo{
-  border: 2px solid blue;
+  /*border: 2px solid blue;*/
  }
  .banner{
   padding: 30px;
@@ -34,19 +34,20 @@
  .banner__menu ul li{
   margin-left: 100px;
   display:inline-block;
-  border: 2px solid green;
+  
 
  }
- .banner__menu ul li a{
-
-  font-size: 40px;
-  text-decoration: none;
-  color: green;
+ .banner__menu ul li .link{
+  padding: 10px;
+  color: red;
+  cursor: pointer;
+  font-size: 33px;
+  background: #FFDEAD;
  }
 .banner__menu ul li{
 
-  font-size: 40px;
-  text-decoration: none;
+  font-size: 30px;
+  
   color: green;
  }
 
@@ -105,8 +106,8 @@
    <div class="banner__logo">vczy</div>
  <div class="banner__menu">
     <ul>
-      <li class="button" onclick="noneOne1()">Alfabet</li>
-      <li class="button"><a href="">English Tenses</a></li>
+      <li class="button" onclick="noneOne1()"><span class="link">Click mi  </span></li>
+      <li class="button">Вкажіть літеру, що передує рухливій</li>
     </ul>
   </div>
 </div>
