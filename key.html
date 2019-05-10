@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>задачи джаваскрипт</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style1.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+ <style>
+ .blockAll{
+  display: block;
+ }
+ .noneAll{
+  display: none;
+}
+.noneOne{
+  
+}
+ .noneTwo{
+  border: 2px solid blue;
+ }
+ .banner{
+  padding: 30px;
+ }
+ .banner__logo{
+   font-size: 40px;
+   font-weight: 900;
+   font-style: italic;
+ }
+ .banner__menu ul li{
+  margin-left: 100px;
+  display:inline-block;
+  border: 2px solid green;
+
+ }
+ .banner__menu ul li a{
+
+  font-size: 40px;
+  text-decoration: none;
+  color: green;
+ }
+.banner__menu ul li{
+
+  font-size: 40px;
+  text-decoration: none;
+  color: green;
+ }
+
+   #ejch{
+    font-size: 7em;
+   }
+
+
+   .an{
+  display: none;
+}
+ .text{
+  display: none;
+ }
+ #put{
+   font-size: 50px;
+ }
+ #header{
+  font-size: 100px;
+  text-align: center;
+ }
+ #main-heading{
+  font-size: 70px;
+ }
+ 
+ 
+ .favet{
+  font-size: 47px;
+ }
+ .box{
+  cursor: pointer;
+  width: 80px;
+  height: 80px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  border: 3px solid green;
+  border-radius: 20%;
+  text-align: center;
+ }
+ .clava{
+  text-align: center;
+ }
+ .t{
+      display: inline-block;
+      font-size: 40px;
+    }
+ </style>
+ </head>
+<body style="font-family: 'Montserrat', sans-serif;">
+
+<div class="container">
+<div class="row">
+<div class="noneTwo">
+<div class="banner">
+   <div class="banner__logo">vczy</div>
+ <div class="banner__menu">
+    <ul>
+      <li class="button" onclick="noneOne1()">Alfabet</li>
+      <li class="button"><a href="">English Tenses</a></li>
+    </ul>
+  </div>
+</div>
+  <h1 id="ejch">mmm...REpeat  </h1>
+</div> 
+<div class="noneOne">
+<div class="timerclock">
+   <div class="t" id="min0">0</div>
+   <div class="t" id="minets"></div>
+   <div class="t">:</div>
+   <div class="t" id="sec0">0</div>
+   <div class="t" id="second"></div>
+  </div>
+<div class="clava">
+  <div class="midle">
+    <div class="box"><span class="favet" id="lit00">q</span></div> 
+    <div class="box"><span class="favet" id="lit01">w</span></div>
+    <div class="box"><span class="favet" id="lit01">e</span></div> 
+    <div class="box"><span class="favet" id="lit01">r</span></div>
+    <div class="box"><span class="favet" id="lit01">t</span></div> 
+    <div class="box"><span class="favet" id="lit01">y</span></div>
+    <div class="box"><span class="favet" id="lit01">u</span></div> 
+    <div class="box"><span class="favet" id="lit01">i</span></div>
+    <div class="box"><span class="favet" id="lit01">o</span></div> 
+    <div class="box"><span class="favet" id="lit01">p</span></div>
+  </div>
+  <div class="midle">
+    <div class="box"><span class="favet" id="lit01">a</span></div> 
+    <div class="box"><span class="favet" id="lit01">s</span></div> 
+    <div class="box"><span class="favet" id="lit01">d</span></div>
+    <div class="box"><span class="favet" id="lit01">f</span></div> 
+    <div class="box"><span class="favet" id="lit01">g</span></div>
+    <div class="box"><span class="favet" id="lit01">h</span></div> 
+    <div class="box"><span class="favet" id="lit01">j</span></div>
+    <div class="box"><span class="favet" id="lit01">k</span></div> 
+    <div class="box"><span class="favet" id="lit01">l</span></div>   
+  </div>
+  <div class="midle">
+    <div class="box"><span class="favet" id="lit01">z</span></div> 
+    <div class="box"><span class="favet" id="lit01">x</span></div> 
+    <div class="box"><span class="favet" id="lit01">c</span></div>
+    <div class="box"><span class="favet" id="lit01">v</span></div> 
+    <div class="box"><span class="favet" id="lit01">b</span></div>
+    <div class="box"><span class="favet" id="lit01">n</span></div> 
+    <div class="box"><span class="favet" id="lit01">m</span></div>  
+  </div>
+</div>
+<span id="main-heading">Вгадай літеру, що стоїть попереду цієї втікачки. </span>
+</div>
+ </div>
+</div>
+<script>
+ document.getElementsByClassName("noneOne")[0].classList.add("noneAll");
+  timeoutIdok = setTimeout(oclock, 500);
+
+  function oclock(){
+  var start = Date.now(); 
+    
+    var timer = setInterval(function() {
+      var timePassed = Date.now() - start;
+  if (timePassed>60000) { 
+  second.innerHTML = Math.floor((timePassed/1000)%60);
+  if((Math.floor((timePassed/1000)%60)==0))sec0.innerHTML="0";
+  if((Math.floor((timePassed/1000)%60)==10))sec0.innerHTML="";
+  }
+  else {
+  if((Math.floor((timePassed/1000))==0))sec0.innerHTML="0";
+  if((Math.floor(timePassed/1000)==10))sec0.innerHTML="";
+  second.innerHTML=Math.floor(timePassed/1000);
+  }
+  minets.innerHTML = Math.floor((timePassed/1000)/60);
+    }, 1000);
+  } 
+
+  al="abcdefghijklmnopqrstuvwxyz";
+  alfabet="bcdefghijklmnopqrstuvwxyz";
+  i=0;
+  
+  var timeoutId = setTimeout(funOne, 500);
+  function funOne(){
+    // clearTimeout(timerId);
+  n= Math.floor(Math.random() *alfabet.length);
+  newheadingtext=alfabet[n];
+  if(alfabet[n]!='a')
+  $("#main-heading").text(newheadingtext);
+  $(".box").click(ttt);
+
+
+ timeoutId = setTimeout(margging, 100);
+ 
+  }
+  
+  function funTwo(){
+    // clearTimeout(timerId);
+  n= Math.floor(Math.random() *alfabet.length);
+  newheadingtext=alfabet[n];
+  i=5;
+  $("#main-heading").text(newheadingtext);
+  
+  }
+
+  function margging(){
+  i=i+10;
+  $("#main-heading").offset({left:i});
+  if(i>1100){
+     clearTimeout(timeoutId);
+  // var timeout = setTimeout(funOne, 2000);
+  i=3;
+    }
+   timeoutId = setTimeout(margging, 100);
+  }
+   
+  var ttt=function(){
+  clearTimeout(timeoutId);
+  
+  for(var j=0;j<al.length;j++){
+
+  if(al[j]==alfabet[n]) k=j;
+   }
+  if($(this).text()==al[k-1]){
+   
+  $(this).css("background","green");
+  alfabet=alfabet.substring(0,n)+alfabet.substring(n+1,alfabet.length);
+  var timeoutId = setTimeout(funTwo, 1000);
+  }
+  else{
+   
+  $(this).css("background","red");
+  var timeoutId = setTimeout(funTwo, 1000);
+  }
+
+ 
+    if(alfabet.length==0)alert(alfabet);
+   
+    
+   
+ }
+  
+function noneOne1(){
+  document.getElementsByClassName("noneTwo")[0].classList.add("noneAll");
+  document.getElementsByClassName("noneOne")[0].classList.remove("noneAll");
+} 
+
+
+
+
+</script>
+
+
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="js/owl.carousel.min.js"></script>
+  <script type="text/javascript" src="js/common.js"></script>
+
+</body>
+
+</html>
